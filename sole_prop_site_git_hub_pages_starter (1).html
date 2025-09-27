@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ramon Amini — Food & Travel</title>
+  <meta name="description" content="Food & travel in short videos. This site is a simple hub that points to my TikTok."/>
+  <meta property="og:title" content="Ramon Amini — Food & Travel"/>
+  <meta property="og:description" content="Food & travel in short videos. Follow me on TikTok for reviews, street food, and tips."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://example.com"/>
+  <meta property="og:image" content="/assets/og-cover.jpg"/>
+  <link rel="icon" href="/assets/favicon.png"/>
+
+  <!-- Tailwind via Play CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: {
+              50: '#eef2ff',
+              100: '#e0e7ff',
+              200: '#c7d2fe',
+              300: '#a5b4fc',
+              400: '#818cf8',
+              500: '#6366f1',
+              600: '#4f46e5',
+              700: '#4338ca',
+              800: '#3730a3',
+              900: '#312e81'
+            }
+          },
+          fontFamily: {
+            display: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            body: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+          },
+          boxShadow: {
+            soft: '0 10px 30px -12px rgba(0,0,0,0.25)'
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    html { scroll-behavior: smooth; }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-100 font-body">
+  <script>
+    // Updated to real TikTok handle
+    const TIKTOK_URL = 'https://www.tiktok.com/@ramoneatsntravels';
+  </script>
+  <!-- Nav -->
+  <header class="sticky top-0 z-50 backdrop-blur bg-slate-950/70 border-b border-white/10">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="#" class="text-lg font-bold tracking-tight">Ramon Amini</a>
+      <a id="ctaTop" href="#" class="md:inline-flex hidden px-3 py-1.5 rounded-full bg-primary-600 hover:bg-primary-500 text-sm font-semibold shadow-soft">Follow on TikTok</a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="relative overflow-hidden">
+    <div class="absolute inset-0 bg-[radial-gradient(60%_60%_at_50%_0%,rgba(99,102,241,0.20),transparent_60%)]"></div>
+    <div class="max-w-6xl mx-auto px-4 py-20 md:py-28 grid md:grid-cols-2 gap-10 items-center">
+      <div>
+        <h1 class="text-4xl md:text-6xl font-extrabold leading-tight tracking-tight">Food & travel in
+          <span class="text-primary-400">bite-size videos</span>
+        </h1>
+        <p class="mt-5 text-slate-300 text-lg max-w-prose">Street food, restaurant reviews, and smart travel tips. No fluff — just the good stuff.</p>
+        <div class="mt-8 flex gap-3">
+          <a id="ctaHero" href="#" class="px-5 py-3 rounded-xl bg-primary-600 hover:bg-primary-500 font-semibold shadow-soft">Follow on TikTok →</a>
+        </div>
+        <p class="mt-6 text-slate-400 text-sm font-medium">TikTok Bio:<br/> 🍜 Street food addict | ✈️ Travel stories | 📍 Sharing bites & sights worldwide<br/> 👉 @ramoneatsntravels</p>
+        <!-- QR Code -->
+        <div class="mt-8">
+          <p class="text-slate-300 mb-2">Scan to open TikTok:</p>
+          <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=https://www.tiktok.com/@ramoneatsntravels" alt="QR code to TikTok" class="rounded-xl shadow-soft inline-block"/>
+        </div>
+      </div>
+      <div class="relative">
+        <div class="aspect-video rounded-2xl overflow-hidden ring-1 ring-white/10 shadow-soft bg-gradient-to-br from-slate-800 to-slate-900 flex items-center justify-center">
+          <div class="p-8 text-center">
+            <p class="text-sm uppercase tracking-widest text-slate-400">Watch here</p>
+            <h3 class="mt-2 text-xl font-semibold">@ramoneatsntravels on TikTok</h3>
+            <a id="ctaCard" href="#" class="inline-block mt-4 px-4 py-2 rounded-lg bg-white text-slate-950 font-semibold">Go to TikTok ▶</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="py-20 border-t border-white/10">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h2 class="text-2xl md:text-3xl font-bold">About</h2>
+      <p class="mt-4 text-slate-300 leading-relaxed">Hi, I’m Ramon. I document food and travel — from hidden local gems to global street eats. This minimalist site exists to make it easy to find my TikTok and share my content.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-10 border-t border-white/10">
+    <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4 text-slate-400 text-sm">
+      <p>© <span id="year"></span> Ramon Amini. All rights reserved.</p>
+      <div class="flex gap-4 items-center">
+        <a id="ctaFooter" href="#" class="hover:text-white">TikTok</a>
+        <link id="relMe" rel="me" href="#">
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Wire all CTAs to TikTok URL
+    const tiktokEls = ['ctaTop','ctaHero','ctaCard','ctaFooter','relMe'];
+    tiktokEls.forEach(id => {
+      const el = document.getElementById(id);
+      if (el) el.setAttribute('href', TIKTOK_URL);
+    });
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
